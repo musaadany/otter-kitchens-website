@@ -51,12 +51,6 @@ document.addEventListener('DOMContentLoaded', () => {
       smoothWheel: true
     });
 
-    function raf(time) {
-      lenis.raf(time);
-      requestAnimationFrame(raf);
-    }
-    requestAnimationFrame(raf);
-
     lenis.on('scroll', ScrollTrigger.update);
     gsap.ticker.add((time) => { lenis.raf(time * 1000); });
     gsap.ticker.lagSmoothing(0);
@@ -229,34 +223,39 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // Hero content fade up on load
-    gsap.to('#heroContent', {
+    gsap.to('#heroContent .hero-reveal', {
       opacity: 1,
-      duration: 0.01
-    });
-    gsap.from('#heroContent .reveal-up', {
-      opacity: 0,
-      y: 50,
+      y: 0,
       duration: 1,
       stagger: 0.18,
       ease: 'power3.out',
       delay: 0.2
     });
 
-    // Process steps stagger
-    gsap.utils.toArray('.process-step').forEach((el, i) => {
-      gsap.from(el, {
-        opacity: 0,
-        y: 40,
-        duration: 0.8,
-        delay: i * 0.15,
-        ease: 'power3.out',
-        scrollTrigger: {
-          trigger: '.process-steps',
-          start: 'top 80%',
-          toggleActions: 'play none none none'
+    ScrollTrigger.refresh();
+  }
+
+
+  /* ─────────────────────────────────────────────────
+     PROCESS — sticky image switcher
+  ───────────────────────────────────────────────── */
+  const processSteps = document.querySelectorAll('.process-step[data-step]');
+  const processImgs  = document.querySelectorAll('.process-img[data-step]');
+  const processCurrent = document.querySelector('.process-current');
+
+  if (processSteps.length && processImgs.length) {
+    const stepObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const step = entry.target.dataset.step;
+          processSteps.forEach(s => s.classList.toggle('active', s.dataset.step === step));
+          processImgs.forEach(img => img.classList.toggle('active', img.dataset.step === step));
+          if (processCurrent) processCurrent.textContent = step.padStart(2, '0');
         }
       });
-    });
+    }, { rootMargin: '-35% 0px -35% 0px', threshold: 0 });
+
+    processSteps.forEach(step => stepObserver.observe(step));
   }
 
 
