@@ -390,35 +390,51 @@ document.addEventListener('DOMContentLoaded', () => {
     btnSpinner.hidden = false;
     submitBtn.disabled = true;
 
-    /* — To actually send emails, sign up at formspree.io,
-         create a form, and replace the URL below with your form endpoint:
-         e.g. https://formspree.io/f/YOUR_FORM_ID
-         Then replace the simulated delay with:
-         const res = await fetch('https://formspree.io/f/YOUR_FORM_ID', {
-           method: 'POST',
-           body: new FormData(form),
-           headers: { 'Accept': 'application/json' }
-         });
-    — */
+    try {
+      const res = await fetch('https://formspree.io/f/xrejwdja', {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
 
-    // Simulated async submit (replace with real endpoint above)
-    await new Promise(r => setTimeout(r, 1400));
+      btnText.hidden = false;
+      btnSpinner.hidden = true;
+      submitBtn.disabled = false;
 
-    btnText.hidden = false;
-    btnSpinner.hidden = true;
-    submitBtn.disabled = false;
-
-    form.style.display = 'none';
-    successMsg.hidden = false;
-
-    // Reset after 8s
-    setTimeout(() => {
-      form.reset();
-      form.style.display = '';
-      successMsg.hidden = true;
-      projectSelect?.classList.remove('has-value');
-    }, 8000);
+      if (res.ok) {
+        form.style.display = 'none';
+        successMsg.hidden = false;
+        setTimeout(() => {
+          form.reset();
+          form.style.display = '';
+          successMsg.hidden = true;
+          projectSelect?.classList.remove('has-value');
+        }, 8000);
+      } else {
+        const data = await res.json().catch(() => ({}));
+        const msg = data?.errors?.map(e => e.message).join(', ') || 'Something went wrong. Please try WhatsApp or email us directly.';
+        showFormError(msg);
+      }
+    } catch {
+      btnText.hidden = false;
+      btnSpinner.hidden = true;
+      submitBtn.disabled = false;
+      showFormError('Network error — please check your connection and try again.');
+    }
   });
+
+  function showFormError(msg) {
+    let errEl = document.getElementById('formError');
+    if (!errEl) {
+      errEl = document.createElement('div');
+      errEl.id = 'formError';
+      errEl.style.cssText = 'margin-top:.75rem;padding:.85rem 1.1rem;background:rgba(224,92,92,.1);border:1px solid rgba(224,92,92,.35);border-radius:2px;color:#e87070;font-size:.85rem;';
+      submitBtn.insertAdjacentElement('afterend', errEl);
+    }
+    errEl.textContent = msg;
+    errEl.hidden = false;
+    setTimeout(() => { errEl.hidden = true; }, 6000);
+  }
 
 
   /* ─────────────────────────────────────────────────
