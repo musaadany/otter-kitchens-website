@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Otter Kitchens — Bespoke Mediterranean Interiors, Egypt</title>
+  <meta name="description" content="Otter Kitchens crafts bespoke Mediterranean kitchens, dressing rooms, and interiors in Egypt. Designed and produced in New Cairo." />
+  <meta name="keywords" content="luxury kitchens Egypt, bespoke kitchens Cairo, Mediterranean kitchens, kitchen design Egypt, dressing rooms Cairo" />
+  <meta property="og:title" content="Otter Kitchens" />
+  <meta property="og:description" content="Bespoke Mediterranean kitchens & interiors. Designed and produced in Egypt." />
+  <meta property="og:url" content="https://www.otterkitchens.com" />
+  <meta property="og:type" content="website" />
+  <link rel="canonical" href="https://www.otterkitchens.com" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <!-- GLightbox CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
+
+  <!-- Main CSS -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ─── Custom Cursor ─── -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- ─── Preloader ─── -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="pl-otter">Otter</span>
+        <span class="pl-bar"></span>
+        <span class="pl-kitchens">KITCHENS</span>
+      </div>
+      <div class="preloader-progress">
+        <span class="preloader-line"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ─── Navigation ─── -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-otter">Otter</span>
+        <span class="logo-bar-wrap"><span class="logo-bar"></span></span>
+        <span class="logo-kitchens">KITCHENS</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#kitchens" class="nav-link">Kitchens</a></li>
+        <li><a href="#collections" class="nav-link">Collections</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link nav-cta">Book a Consultation</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <a href="https://wa.me/201289498450" target="_blank" rel="noopener" class="nav-whatsapp" aria-label="WhatsApp">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        </a>
+        <button class="nav-hamburger" id="navHamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Mobile Nav Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <button class="drawer-close" id="drawerClose" aria-label="Close">&#x2715;</button>
+    <ul class="drawer-links">
+      <li><a href="#kitchens">Kitchens</a></li>
+      <li><a href="#collections">Collections</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Book a Consultation</a></li>
+    </ul>
+    <div class="drawer-contact">
+      <p>+20 12 8949 8450</p>
+      <p>Salma@otterkitchens.com</p>
+      <p>Arabella Plaza, New Cairo</p>
+    </div>
+  </div>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- ─── Hero ─── -->
+  <section id="hero">
+    <div class="hero-bg" id="heroBg">
+      <img
+        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=85"
+        alt="Luxury kitchen by Otter Kitchens"
+        class="hero-img"
+        fetchpriority="high"
+      />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content" id="heroContent">
+      <span class="hero-eyebrow reveal-up">New Cairo, Egypt</span>
+      <h1 class="hero-title reveal-up">
+        Where Mediterranean<br />
+        <em>Craft</em> Meets<br />
+        Everyday Living
+      </h1>
+      <p class="hero-sub reveal-up">Bespoke kitchens &amp; interiors — designed and produced in Egypt.</p>
+      <div class="hero-actions reveal-up">
+        <a href="#kitchens" class="btn btn-outline">Explore Kitchens</a>
+        <a href="#contact" class="btn btn-gold">Book a Consultation</a>
+      </div>
+    </div>
+    <a href="#about" class="hero-scroll" aria-label="Scroll down">
+      <span class="scroll-label">Scroll</span>
+      <span class="scroll-dot"></span>
+    </a>
+  </section>
+
+  <!-- ─── About ─── -->
+  <section id="about" class="section-about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <span class="eyebrow reveal-up">Our Story</span>
+          <h2 class="h2 reveal-up">Crafted with<br /><em>intention.</em><br />Built to last.</h2>
+          <p class="body-text reveal-up">
+            Otter Kitchens was born from a belief that your home deserves more than a catalogue.
+            Every kitchen, every dressing room, every detail is drawn from the warmth of Mediterranean
+            craft — refined for the contemporary Egyptian home.
+          </p>
+          <p class="body-text reveal-up">
+            Founded by Salma Elsaadany and Marcelle Saweris at Arabella Plaza, New Cairo,
+            we design, produce, and install entirely in-house — so quality is never left to chance.
+          </p>
+          <a href="#contact" class="btn btn-outline-dark reveal-up">Start Your Project</a>
+        </div>
+        <div class="about-image reveal-right">
+          <img
+            src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=900&q=85"
+            alt="Elegant kitchen interior"
+            loading="lazy"
+          />
+          <div class="about-image-accent"></div>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="stats-row">
+        <div class="stat-item reveal-up">
+          <span class="stat-number" data-target="500">0</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Projects Completed</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item reveal-up">
+          <span class="stat-number" data-target="10">0</span>
+          <span class="stat-plus">+</span>
+          <span class="stat-label">Years of Craft</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item reveal-up">
+          <span class="stat-number" data-target="100">0</span>
+          <span class="stat-plus">%</span>
+          <span class="stat-label">In-House Production</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Kitchens ─── -->
+  <section id="kitchens" class="section-kitchens">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="eyebrow">Our Signature Work</span>
+        <h2 class="h2">Our <em>Kitchens</em></h2>
+        <p class="section-sub">Six distinct styles — each crafted to your space, your taste, your life.</p>
+      </div>
+    </div>
+
+    <div class="kitchens-grid">
+      <div class="kitchen-card reveal-scale" data-style="Modern Mediterranean">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=800&h=900&q=80" alt="Modern Mediterranean kitchen" loading="lazy" />
+        <div class="kitchen-card-overlay">
+          <span class="kitchen-card-number">01</span>
+          <h3 class="kitchen-card-title">Modern Mediterranean</h3>
+          <span class="kitchen-card-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="kitchen-card kitchen-card-tall reveal-scale" data-style="Classic White">
+        <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=800&h=1200&q=80" alt="Classic white kitchen" loading="lazy" />
+        <div class="kitchen-card-overlay">
+          <span class="kitchen-card-number">02</span>
+          <h3 class="kitchen-card-title">Classic White</h3>
+          <span class="kitchen-card-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="kitchen-card reveal-scale" data-style="Dark & Moody">
+        <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=800&h=900&q=80" alt="Dark moody kitchen" loading="lazy" />
+        <div class="kitchen-card-overlay">
+          <span class="kitchen-card-number">03</span>
+          <h3 class="kitchen-card-title">Dark &amp; Moody</h3>
+          <span class="kitchen-card-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="kitchen-card kitchen-card-wide reveal-scale" data-style="Open-Plan">
+        <img src="https://images.unsplash.com/photo-1556909048-f5d70f7a234b?auto=format&fit=crop&w=1200&h=700&q=80" alt="Open plan kitchen" loading="lazy" />
+        <div class="kitchen-card-overlay">
+          <span class="kitchen-card-number">04</span>
+          <h3 class="kitchen-card-title">Open-Plan</h3>
+          <span class="kitchen-card-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="kitchen-card reveal-scale" data-style="Handleless">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&h=900&q=80" alt="Handleless kitchen" loading="lazy" />
+        <div class="kitchen-card-overlay">
+          <span class="kitchen-card-number">05</span>
+          <h3 class="kitchen-card-title">Handleless</h3>
+          <span class="kitchen-card-arrow">→</span>
+        </div>
+      </div>
+
+      <div class="kitchen-card reveal-scale" data-style="Island Kitchens">
+        <img src="https://images.unsplash.com/photo-1556909190-10cdc9e6d8ae?auto=format&fit=crop&w=800&h=900&q=80" alt="Island kitchen" loading="lazy" />
+        <div class="kitchen-card-overlay">
+          <span class="kitchen-card-number">06</span>
+          <h3 class="kitchen-card-title">Island Kitchens</h3>
+          <span class="kitchen-card-arrow">→</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="kitchens-cta reveal-up">
+      <a href="#contact" class="btn btn-gold">Request a Design Consultation</a>
+    </div>
+  </section>
+
+  <!-- ─── Collections (Beyond the Kitchen) ─── -->
+  <section id="collections" class="section-collections">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="eyebrow">More Than Kitchens</span>
+        <h2 class="h2">Beyond the <em>Kitchen</em></h2>
+        <p class="section-sub">We bring the same obsessive craft to every room in your home.</p>
+      </div>
+    </div>
+
+    <div class="swiper collections-swiper" id="collectionsSwiper">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide collection-card">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=700&h=800&q=80" alt="Dressing room" loading="lazy" />
+          </div>
+          <div class="collection-info">
+            <span class="collection-icon">✦</span>
+            <h3>Dressing Rooms</h3>
+            <p>Walk-in wardrobes and dressing areas designed around your lifestyle — every rail, shelf, and drawer considered.</p>
+            <a href="#contact" class="collection-link">Enquire <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide collection-card">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=700&h=800&q=80" alt="TV unit" loading="lazy" />
+          </div>
+          <div class="collection-info">
+            <span class="collection-icon">✦</span>
+            <h3>TV Units</h3>
+            <p>Statement living-room pieces that frame your space — from minimalist floating panels to full-wall entertainment walls.</p>
+            <a href="#contact" class="collection-link">Enquire <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide collection-card">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1493663284031-b7e3aefcae8e?auto=format&fit=crop&w=700&h=800&q=80" alt="Walk-in wardrobe" loading="lazy" />
+          </div>
+          <div class="collection-info">
+            <span class="collection-icon">✦</span>
+            <h3>Walk-in Wardrobes</h3>
+            <p>Custom storage systems with integrated lighting, velvet linings, and hardware chosen to match your aesthetic.</p>
+            <a href="#contact" class="collection-link">Enquire <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide collection-card">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?auto=format&fit=crop&w=700&h=800&q=80" alt="Home library" loading="lazy" />
+          </div>
+          <div class="collection-info">
+            <span class="collection-icon">✦</span>
+            <h3>Home Libraries</h3>
+            <p>Floor-to-ceiling bespoke shelving, study nooks, and reading rooms that make your books a centrepiece.</p>
+            <a href="#contact" class="collection-link">Enquire <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="swiper-slide collection-card">
+          <div class="collection-img-wrap">
+            <img src="https://images.unsplash.com/photo-1615529182904-14819c35db37?auto=format&fit=crop&w=700&h=800&q=80" alt="Bathroom vanity" loading="lazy" />
+          </div>
+          <div class="collection-info">
+            <span class="collection-icon">✦</span>
+            <h3>Bathroom Vanities</h3>
+            <p>Custom vanity units, mirror cabinets, and bathroom furniture built with water-resistant precision and elegance.</p>
+            <a href="#contact" class="collection-link">Enquire <span>→</span></a>
+          </div>
+        </div>
+
+      </div>
+      <div class="swiper-pagination collections-pagination"></div>
+      <div class="swiper-button-prev collections-prev"></div>
+      <div class="swiper-button-next collections-next"></div>
+    </div>
+  </section>
+
+  <!-- ─── Process ─── -->
+  <section id="process" class="section-process">
+    <div class="container">
+      <div class="section-header section-header-light reveal-up">
+        <span class="eyebrow eyebrow-gold">Our Process</span>
+        <h2 class="h2 h2-light">How We <em>Work</em></h2>
+        <p class="section-sub section-sub-light">From first conversation to final installation — every step is handled by us.</p>
+      </div>
+
+      <div class="process-steps">
+        <div class="process-step reveal-up">
+          <div class="process-step-number">01</div>
+          <div class="process-step-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <circle cx="16" cy="12" r="5"/><path d="M4 28c0-6.627 5.373-12 12-12s12 5.373 12 12"/>
+            </svg>
+          </div>
+          <h3 class="process-step-title">Consultation</h3>
+          <p class="process-step-desc">We sit with you to understand your space, your style, and your vision — no templates, no pressure.</p>
+        </div>
+
+        <div class="process-connector reveal-up"></div>
+
+        <div class="process-step reveal-up">
+          <div class="process-step-number">02</div>
+          <div class="process-step-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <rect x="3" y="3" width="26" height="26" rx="2"/><path d="M9 9h4v4H9zm10 0h4v4h-4zM9 19h14"/>
+            </svg>
+          </div>
+          <h3 class="process-step-title">3D Design</h3>
+          <p class="process-step-desc">Our designers produce photorealistic renders so you see exactly what you're getting — before a single panel is cut.</p>
+        </div>
+
+        <div class="process-connector reveal-up"></div>
+
+        <div class="process-step reveal-up">
+          <div class="process-step-number">03</div>
+          <div class="process-step-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M6 26V12l10-8 10 8v14"/><rect x="12" y="18" width="8" height="8"/>
+            </svg>
+          </div>
+          <h3 class="process-step-title">In-House Production</h3>
+          <p class="process-step-desc">Every piece is manufactured in our own facility using premium materials — zero outsourcing, full control.</p>
+        </div>
+
+        <div class="process-connector reveal-up"></div>
+
+        <div class="process-step reveal-up">
+          <div class="process-step-number">04</div>
+          <div class="process-step-icon">
+            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M4 16l8 8L28 8"/>
+            </svg>
+          </div>
+          <h3 class="process-step-title">Installation</h3>
+          <p class="process-step-desc">Our certified team installs everything with precision. We only leave once you're completely satisfied.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Gallery ─── -->
+  <section id="gallery" class="section-gallery">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="eyebrow">Portfolio</span>
+        <h2 class="h2">Our <em>Work</em></h2>
+      </div>
+    </div>
+
+    <div class="gallery-grid" id="galleryGrid">
+      <a href="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1400&q=90" class="gallery-item glightbox reveal-scale" data-gallery="otter" data-description="Modern Mediterranean Kitchen">
+        <img src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=600&h=700&q=80" alt="Kitchen project 1" loading="lazy" />
+        <div class="gallery-item-hover"><span>View</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1400&q=90" class="gallery-item gallery-item-wide glightbox reveal-scale" data-gallery="otter" data-description="Handleless Kitchen, New Cairo">
+        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=900&h=600&q=80" alt="Kitchen project 2" loading="lazy" />
+        <div class="gallery-item-hover"><span>View</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=1400&q=90" class="gallery-item gallery-item-tall glightbox reveal-scale" data-gallery="otter" data-description="Classic White Kitchen">
+        <img src="https://images.unsplash.com/photo-1600489000022-c2086d79f9d4?auto=format&fit=crop&w=600&h=900&q=80" alt="Kitchen project 3" loading="lazy" />
+        <div class="gallery-item-hover"><span>View</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=1400&q=90" class="gallery-item glightbox reveal-scale" data-gallery="otter" data-description="Open-Plan Kitchen & Dining">
+        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=600&h=700&q=80" alt="Kitchen project 4" loading="lazy" />
+        <div class="gallery-item-hover"><span>View</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=1400&q=90" class="gallery-item glightbox reveal-scale" data-gallery="otter" data-description="Custom Dressing Room">
+        <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=600&h=700&q=80" alt="Dressing room project" loading="lazy" />
+        <div class="gallery-item-hover"><span>View</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=1400&q=90" class="gallery-item gallery-item-wide glightbox reveal-scale" data-gallery="otter" data-description="Dark & Moody Kitchen, Maadi">
+        <img src="https://images.unsplash.com/photo-1556909212-d5b604d0c90d?auto=format&fit=crop&w=900&h=600&q=80" alt="Kitchen project 6" loading="lazy" />
+        <div class="gallery-item-hover"><span>View</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=1400&q=90" class="gallery-item glightbox reveal-scale" data-gallery="otter" data-description="Living Room TV Unit">
+        <img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=600&h=700&q=80" alt="TV unit project" loading="lazy" />
+        <div class="gallery-item-hover"><span>View</span></div>
+      </a>
+      <a href="https://images.unsplash.com/photo-1556909190-10cdc9e6d8ae?auto=format&fit=crop&w=1400&q=90" class="gallery-item glightbox reveal-scale" data-gallery="otter" data-description="Island Kitchen, New Cairo">
+        <img src="https://images.unsplash.com/photo-1556909190-10cdc9e6d8ae?auto=format&fit=crop&w=600&h=700&q=80" alt="Kitchen project 8" loading="lazy" />
+        <div class="gallery-item-hover"><span>View</span></div>
+      </a>
+    </div>
+
+    <div class="gallery-cta reveal-up">
+      <a href="https://www.instagram.com/otter.kitchens" target="_blank" rel="noopener" class="btn btn-outline-dark">
+        View Full Portfolio on Instagram ↗
+      </a>
+    </div>
+  </section>
+
+  <!-- ─── Testimonials ─── -->
+  <section id="testimonials" class="section-testimonials">
+    <div class="container">
+      <div class="section-header reveal-up">
+        <span class="eyebrow">Client Stories</span>
+        <h2 class="h2">What Our Clients <em>Say</em></h2>
+      </div>
+
+      <div class="swiper testimonials-swiper" id="testimonialsSwiper">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              "Otter transformed our entire kitchen in ways I couldn't have imagined. The attention to detail,
+              the quality of materials, the finish — everything is exceptional. I get compliments every single week."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">N</div>
+              <div>
+                <strong>Nour Hafez</strong>
+                <span>Kitchen — New Cairo</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              "We had our dressing room done by Otter and honestly it changed how I start my morning.
+              Salma was incredibly responsive throughout the whole process. They really listen."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">L</div>
+              <div>
+                <strong>Lina Mansour</strong>
+                <span>Dressing Room — Maadi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              "Professional from day one. The 3D renders were so accurate that when we walked in on
+              installation day, there were zero surprises — just pure joy. Outstanding work."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">K</div>
+              <div>
+                <strong>Karim El-Masry</strong>
+                <span>Open-Plan Kitchen — Rehab City</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              "I've worked with many interior companies in Cairo and none come close to the quality
+              and service level that Otter consistently delivers. They are simply the best."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">R</div>
+              <div>
+                <strong>Rana Farouk</strong>
+                <span>Full Home — Katameya Heights</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide testimonial-card">
+            <div class="testimonial-stars">★★★★★</div>
+            <blockquote class="testimonial-quote">
+              "The island kitchen they designed for us is the centrepiece of our home now.
+              Every guest asks about it. Worth every penny — and then some."
+            </blockquote>
+            <div class="testimonial-author">
+              <div class="testimonial-avatar">M</div>
+              <div>
+                <strong>Mohamed Tawfik</strong>
+                <span>Island Kitchen — Sheikh Zayed</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination testimonials-pagination"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Contact ─── -->
+  <section id="contact" class="section-contact">
+    <div class="container">
+      <div class="contact-grid">
+
+        <div class="contact-info reveal-up">
+          <span class="eyebrow eyebrow-gold">Get in Touch</span>
+          <h2 class="h2 h2-light">Begin Your <em>Project</em></h2>
+          <p class="body-text body-text-light">
+            Tell us about your space and we'll arrange a complimentary consultation at our New Cairo showroom or at your home.
+          </p>
+
+          <div class="contact-details">
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+              </div>
+              <div>
+                <strong>Showroom</strong>
+                <p>Arabella Plaza, New Cairo, Egypt</p>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.81a19.79 19.79 0 01-3.07-8.63A2 2 0 012 .18h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 7.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z"/></svg>
+              </div>
+              <div>
+                <strong>Phone / WhatsApp</strong>
+                <p>+20 12 8949 8450</p>
+                <p>+20 11 2510 5264</p>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </div>
+              <div>
+                <strong>Email</strong>
+                <p>Salma@otterkitchens.com</p>
+              </div>
+            </div>
+            <div class="contact-detail-item">
+              <div class="contact-detail-icon">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+              </div>
+              <div>
+                <strong>Social</strong>
+                <p>@Otterkitchens.me</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal-up">
+          <form class="contact-form" id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone / WhatsApp *</label>
+                <input type="tel" id="phone" name="phone" placeholder="+20 1xx xxx xxxx" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" />
+            </div>
+            <div class="form-group">
+              <label for="project">Type of Project *</label>
+              <select id="project" name="project" required>
+                <option value="" disabled selected>Select a category</option>
+                <option>Kitchen</option>
+                <option>Dressing Room</option>
+                <option>TV Unit</option>
+                <option>Walk-in Wardrobe</option>
+                <option>Home Library</option>
+                <option>Full Home</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="message">Tell us about your project</label>
+              <textarea id="message" name="message" rows="4" placeholder="Describe your space, style preferences, timeline..."></textarea>
+            </div>
+            <button type="submit" class="btn btn-gold btn-full" id="submitBtn">
+              <span class="btn-text">Send Message</span>
+              <span class="btn-spinner" hidden>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+              </span>
+            </button>
+            <div class="form-success" id="formSuccess" hidden>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p>Thank you! We'll be in touch within 24 hours.</p>
+            </div>
+          </form>
+
+          <p class="form-note">
+            Prefer WhatsApp?
+            <a href="https://wa.me/201289498450?text=Hi%20Otter%20Kitchens%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener">Message us directly →</a>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── Footer ─── -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#hero" class="nav-logo footer-logo">
+            <span class="logo-otter">Otter</span>
+            <span class="logo-bar-wrap"><span class="logo-bar"></span></span>
+            <span class="logo-kitchens">KITCHENS</span>
+          </a>
+          <p class="footer-tagline">Bespoke Mediterranean interiors,<br />designed &amp; produced in Egypt.</p>
+          <div class="footer-social">
+            <a href="https://www.instagram.com/otter.kitchens" target="_blank" rel="noopener" aria-label="Instagram">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://www.facebook.com/Otterkitchens.me" target="_blank" rel="noopener" aria-label="Facebook">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+            </a>
+            <a href="https://wa.me/201289498450" target="_blank" rel="noopener" aria-label="WhatsApp">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Explore</h4>
+          <ul class="footer-links">
+            <li><a href="#kitchens">Kitchens</a></li>
+            <li><a href="#collections">Dressing Rooms</a></li>
+            <li><a href="#collections">TV Units</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links footer-contact-links">
+            <li><a href="tel:+201289498450">+20 12 8949 8450</a></li>
+            <li><a href="tel:+201125105264">+20 11 2510 5264</a></li>
+            <li><a href="mailto:Salma@otterkitchens.com">Salma@otterkitchens.com</a></li>
+            <li>Arabella Plaza, New Cairo, Egypt</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; <span id="year"></span> Otter Kitchens. All rights reserved.</p>
+        <p class="footer-credit">Arabella Plaza, New Cairo, Egypt</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ─── WhatsApp Floating Button ─── -->
+  <a href="https://wa.me/201289498450?text=Hi%20Otter%20Kitchens%2C%20I%27d%20like%20to%20discuss%20a%20project." target="_blank" rel="noopener" class="whatsapp-fab" aria-label="Chat on WhatsApp">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-tooltip">Chat with us</span>
+  </a>
+
+  <!-- CDN Scripts -->
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@studio-freight/lenis@1.0.42/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
