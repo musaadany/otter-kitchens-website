@@ -13,11 +13,9 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ─────────────────────────────────────────────────
      PRELOADER
   ───────────────────────────────────────────────── */
-  const preloader  = document.getElementById('preloader');
-  const plOtter    = document.querySelector('.pl-otter');
-  const plBar      = document.querySelector('.pl-bar');
-  const plKitchens = document.querySelector('.pl-kitchens');
-  const plLine     = document.querySelector('.preloader-line');
+  const preloader = document.getElementById('preloader');
+  const plLogoImg = document.querySelector('.pl-logo-img');
+  const plLine    = document.querySelector('.preloader-line');
 
   const tl = gsap.timeline({
     onComplete: () => {
@@ -37,10 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.body.style.overflow = 'hidden';
 
   tl
-    .to(plLine, { width: '100%', duration: 1.4, ease: 'power2.inOut' }, 0)
-    .to(plOtter, { opacity: 1, y: 0, duration: 0.7, ease: 'power3.out' }, 0.3)
-    .to(plBar,   { width: '80%', duration: 0.6, ease: 'power3.out' }, 0.7)
-    .to(plKitchens, { opacity: 1, duration: 0.5, ease: 'power2.out' }, 0.9);
+    .to(plLine,    { width: '100%', duration: 1.4, ease: 'power2.inOut' }, 0)
+    .to(plLogoImg, { opacity: 1, y: 0, duration: 0.9, ease: 'power3.out' }, 0.3);
 
 
   /* ─────────────────────────────────────────────────
@@ -364,25 +360,37 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnText    = submitBtn?.querySelector('.btn-text');
   const btnSpinner = submitBtn?.querySelector('.btn-spinner');
 
-  // Mark select as having value for styling
-  const projectSelect = document.getElementById('project');
-  projectSelect?.addEventListener('change', () => {
-    if (projectSelect.value) projectSelect.classList.add('has-value');
+  // Multi-select chips
+  const projectHidden = document.getElementById('projectHidden');
+  document.querySelectorAll('.chip').forEach(chip => {
+    chip.addEventListener('click', () => {
+      chip.classList.toggle('active');
+      const selected = [...document.querySelectorAll('.chip.active')].map(c => c.dataset.value);
+      projectHidden.value = selected.join(', ');
+    });
   });
 
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Basic validation
-    const required = form.querySelectorAll('[required]');
+    // Validate name + phone
     let valid = true;
-    required.forEach(field => {
-      if (!field.value.trim()) {
+    ['name', 'phone'].forEach(id => {
+      const field = document.getElementById(id);
+      if (field && !field.value.trim()) {
         field.style.borderColor = '#e05c5c';
         valid = false;
         setTimeout(() => { field.style.borderColor = ''; }, 2500);
       }
     });
+    // Validate at least one project chip selected
+    if (!projectHidden?.value) {
+      const chipsGroup = document.getElementById('projectChips');
+      chipsGroup.style.outline = '1px solid #e05c5c';
+      chipsGroup.style.borderRadius = '4px';
+      valid = false;
+      setTimeout(() => { chipsGroup.style.outline = ''; }, 2500);
+    }
     if (!valid) return;
 
     // Show loading state
@@ -406,9 +414,10 @@ document.addEventListener('DOMContentLoaded', () => {
         successMsg.hidden = false;
         setTimeout(() => {
           form.reset();
+          document.querySelectorAll('.chip').forEach(c => c.classList.remove('active'));
+          if (projectHidden) projectHidden.value = '';
           form.style.display = '';
           successMsg.hidden = true;
-          projectSelect?.classList.remove('has-value');
         }, 8000);
       } else {
         const data = await res.json().catch(() => ({}));

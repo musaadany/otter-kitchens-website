@@ -15,7 +15,7 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <!-- Swiper CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
@@ -35,9 +35,7 @@
   <div id="preloader">
     <div class="preloader-inner">
       <div class="preloader-logo">
-        <span class="pl-otter">Otter</span>
-        <span class="pl-bar"></span>
-        <span class="pl-kitchens">KITCHENS</span>
+        <img src="assets/logo.svg" alt="Otter Kitchens" class="pl-logo-img" />
       </div>
       <div class="preloader-progress">
         <span class="preloader-line"></span>
@@ -49,9 +47,7 @@
   <nav id="navbar">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
-        <span class="logo-otter">Otter</span>
-        <span class="logo-bar-wrap"><span class="logo-bar"></span></span>
-        <span class="logo-kitchens">KITCHENS</span>
+        <img src="assets/logo.svg" alt="Otter Kitchens" class="nav-logo-img" />
       </a>
 
       <ul class="nav-links" id="navLinks">
@@ -95,7 +91,7 @@
   <section id="hero">
     <div class="hero-bg" id="heroBg">
       <img
-        src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=1920&q=85"
+        src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85"
         alt="Luxury kitchen by Otter Kitchens"
         class="hero-img"
         fetchpriority="high"
@@ -141,7 +137,7 @@
         </div>
         <div class="about-image reveal-right">
           <img
-            src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=900&q=85"
+            src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?auto=format&fit=crop&w=900&q=85"
             alt="Elegant kitchen interior"
             loading="lazy"
           />
@@ -211,7 +207,7 @@
       </div>
 
       <div class="kitchen-card kitchen-card-wide reveal-scale" data-style="Open-Plan">
-        <img src="https://images.unsplash.com/photo-1556909048-f5d70f7a234b?auto=format&fit=crop&w=1200&h=700&q=80" alt="Open plan kitchen" loading="lazy" />
+        <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?auto=format&fit=crop&w=1200&h=700&q=80" alt="Open plan kitchen" loading="lazy" />
         <div class="kitchen-card-overlay">
           <span class="kitchen-card-number">04</span>
           <h3 class="kitchen-card-title">Open-Plan</h3>
@@ -547,7 +543,7 @@
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
               </div>
               <div>
-                <strong>Showroom</strong>
+                <strong>Office</strong>
                 <p>Arabella Plaza, New Cairo, Egypt</p>
               </div>
             </div>
@@ -567,16 +563,19 @@
               </div>
               <div>
                 <strong>Email</strong>
-                <p>Salma@otterkitchens.com</p>
+                <p><a href="mailto:info@otterkitchens.me" style="color:inherit">info@otterkitchens.me</a></p>
               </div>
             </div>
             <div class="contact-detail-item">
-              <div class="contact-detail-icon">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
-              </div>
-              <div>
-                <strong>Social</strong>
-                <p>@Otterkitchens.me</p>
+              <div class="contact-social-links">
+                <a href="https://www.instagram.com/otterkitchens.me/" target="_blank" rel="noopener" class="contact-social-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor" stroke="none"/></svg>
+                  <span>@otterkitchens.me</span>
+                </a>
+                <a href="https://www.facebook.com/otterkitchens.me" target="_blank" rel="noopener" class="contact-social-btn">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                  <span>otterkitchens.me</span>
+                </a>
               </div>
             </div>
           </div>
@@ -599,17 +598,17 @@
               <input type="email" id="email" name="email" placeholder="your@email.com" />
             </div>
             <div class="form-group">
-              <label for="project">Type of Project *</label>
-              <select id="project" name="project" required>
-                <option value="" disabled selected>Select a category</option>
-                <option>Kitchen</option>
-                <option>Dressing Room</option>
-                <option>TV Unit</option>
-                <option>Walk-in Wardrobe</option>
-                <option>Home Library</option>
-                <option>Full Home</option>
-                <option>Other</option>
-              </select>
+              <label>Type of Project * <span class="label-hint">(select all that apply)</span></label>
+              <div class="chips-group" id="projectChips">
+                <button type="button" class="chip" data-value="Kitchen">Kitchen</button>
+                <button type="button" class="chip" data-value="Dressing Room">Dressing Room</button>
+                <button type="button" class="chip" data-value="TV Unit">TV Unit</button>
+                <button type="button" class="chip" data-value="Walk-in Wardrobe">Walk-in Wardrobe</button>
+                <button type="button" class="chip" data-value="Home Library">Home Library</button>
+                <button type="button" class="chip" data-value="Full Home">Full Home</button>
+                <button type="button" class="chip" data-value="Other">Other</button>
+              </div>
+              <input type="hidden" name="project" id="projectHidden" />
             </div>
             <div class="form-group">
               <label for="message">Tell us about your project</label>
@@ -643,9 +642,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="#hero" class="nav-logo footer-logo">
-            <span class="logo-otter">Otter</span>
-            <span class="logo-bar-wrap"><span class="logo-bar"></span></span>
-            <span class="logo-kitchens">KITCHENS</span>
+            <img src="assets/logo.svg" alt="Otter Kitchens" class="nav-logo-img" />
           </a>
           <p class="footer-tagline">Bespoke Mediterranean interiors,<br />designed &amp; produced in Egypt.</p>
           <div class="footer-social">
@@ -677,7 +674,7 @@
           <ul class="footer-links footer-contact-links">
             <li><a href="tel:+201289498450">+20 12 8949 8450</a></li>
             <li><a href="tel:+201125105264">+20 11 2510 5264</a></li>
-            <li><a href="mailto:Salma@otterkitchens.com">Salma@otterkitchens.com</a></li>
+            <li><a href="mailto:info@otterkitchens.me">info@otterkitchens.me</a></li>
             <li>Arabella Plaza, New Cairo, Egypt</li>
           </ul>
         </div>
